@@ -1,0 +1,39 @@
+{
+  "name": "project-fusion",
+  "version": "0.0.1",
+  "description": "JSPM Starter Kit",
+  "main": "index.html",
+  "dependencies": {
+    "jspm": "^0.15.7"
+  },
+  "devDependencies": {
+    "jspm": "^0.16.0-beta.3"
+  },
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/fusionstrings/project-fusion-2"
+  },
+  "keywords": [
+    "JSPM",
+    "Babel",
+    "Karma",
+    "ES6",
+    "Mocha",
+    "Jasmine"
+  ],
+  "author": "Dilip Kr. Shukla",
+  "license": "ISC",
+  "jspm": {
+    "directories": {},
+    "configFile": "system.config.js",
+    "dependencies": {},
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.6.4",
+      "babel-runtime": "npm:babel-runtime@^5.6.4",
+      "core-js": "npm:core-js@^0.9.17"
+    }
+  }
+}
