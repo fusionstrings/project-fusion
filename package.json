@@ -1,12 +1,16 @@
 {
   "name": "project-fusion",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "JSPM Starter Kit",
   "main": "index.html",
   "dependencies": {
     "jspm": "^0.15.7"
   },
   "devDependencies": {
+    "babel": "^5.6.7",
+    "browser-sync": "^2.7.12",
+    "gulp": "^3.9.0",
+    "gulp-bump": "^0.3.1",
     "jspm": "^0.16.0-beta.3"
   },
   "scripts": {
