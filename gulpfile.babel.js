@@ -36,13 +36,13 @@ gulp.task('serve', () => {
 });
 
 
-gulp.task('changelog', () => {
+gulp.task('changelog', ['release'], () => {
   return changelog({
     repository: pkg.repository.url,
     preset: 'angular',
     version: pkg.version,
     file: './CHANGELOG.md'
-  }, function(err, log) {
+  }, (err, log) => {
     fs.writeFileSync('CHANGELOG.md', log);
   });
 });
@@ -53,21 +53,24 @@ gulp.task('bump', () => {
   .pipe(gulp.dest('./'));
 });
 
-gulp.task('release', () => {
-  release();
-
+gulp.task('release', [], () => {
+  //release();
+  conventionalRecommendedBump({
+    preset: 'angular'
+  }, (err, releaseAs) => {
+    console.log('releaseAs', releaseAs);
+    gulp.src('./package.json')
+    .pipe(bump({type: releaseAs}))
+    .pipe(gulp.dest('./'));
+  });
   console.log('released');
 });
 
 gulp.task('cbump', () => {
-  console.log('bump');
-  //conventionalRecommendedBump({
-
-    conventionalRecommendedBump({
-      preset: 'angular'
-    }, function(err, releaseAs) {
-      console.log('releaseAs', releaseAs);
-    });
-
-  //});
+  console.log('cbump');
+  conventionalRecommendedBump({
+    preset: 'angular'
+  }, (err, releaseAs) => {
+    console.log('releaseAs', releaseAs);
+  });
 });

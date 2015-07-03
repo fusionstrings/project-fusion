@@ -1,6 +1,6 @@
 {
 	"name": "semantic-release-gitflow",
-	"version": "0.1.0",
+	"version": "0.3.0",
 	"description": "Semantic release for [gitflow](https://github.com/petervanderdoes/gitflow)",
 	"main": "index.js",
 	"scripts": {
