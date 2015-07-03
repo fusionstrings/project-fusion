@@ -1,12 +1,17 @@
 import gulp from 'gulp';
 import browserSync from 'browser-sync';
+import fs from 'fs-extra';
 import {merge, map} from 'event-stream';
+import series from 'stream-series';
 import bump from 'gulp-bump';
+import conventionalRecommendedBump from 'conventional-recommended-bump';
 import changelog from 'conventional-changelog';
 import source from 'vinyl-source-stream';
 import buffer from 'vinyl-buffer';
 import addsrc from 'gulp-add-src';
 import concat from 'gulp-concat';
+import release from 'semantic-release-gitflow';
+import gitFlowBumpType from 'git-flow-bump-type';
 import pkg from './package.json';
 
 const reload = browserSync.reload;
@@ -30,36 +35,42 @@ gulp.task('serve', () => {
   gulp.watch(['./images/**/*'], reload);
 });
 
+
+gulp.task('changelog', ['release'], () => {
+  return changelog({
+    repository: pkg.repository.url,
+    preset: 'angular',
+    version: pkg.version,
+    file: './CHANGELOG.md'
+  }, (err, log) => {
+    fs.writeFileSync('CHANGELOG.md', log);
+  });
+});
+
 gulp.task('bump', () => {
   gulp.src('./package.json')
   .pipe(bump())
   .pipe(gulp.dest('./'));
 });
 
-gulp.task('changelog', () => {
-  const newChangesStream = changelog(
-    {preset: 'angular'}
-  );
-
-  const oldChangesStream = gulp.src('CHANGELOG.md')
-    .pipe(map((file, cb) => cb(null, file.contents)));
-
-  const latestChangesFileStream = newChangesStream
-    .pipe(source('LATEST_CHANGES.md'));
-
-  const changelogFileStream = series(newChangesStream, oldChangesStream)
-    .pipe(source('CHANGELOG.md'));
-
-  return merge(changelogFileStream, latestChangesFileStream)
-    .pipe(gulp.dest('.'));
-  /*
-  conventionalChangelog({
+gulp.task('release', [], () => {
+  //release();
+  conventionalRecommendedBump({
     preset: 'angular'
-  })
-  .pipe(source('./'))
-  .pipe(buffer())
-  .pipe(addsrc.append('CHANGELOG.md'))
-  .pipe(concat('CHANGELOG.md'))
-  .pipe(gulp.dest('./'));
-  */
+  }, (err, releaseAs) => {
+    console.log('releaseAs', releaseAs);
+    gulp.src('./package.json')
+    .pipe(bump({type: releaseAs}))
+    .pipe(gulp.dest('./'));
+  });
+  console.log('released');
+});
+
+gulp.task('cbump', () => {
+  console.log('cbump');
+  conventionalRecommendedBump({
+    preset: 'angular'
+  }, (err, releaseAs) => {
+    console.log('releaseAs', releaseAs);
+  });
 });
