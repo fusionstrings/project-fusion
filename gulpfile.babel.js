@@ -53,19 +53,12 @@ gulp.task('bump', () => {
   .pipe(gulp.dest('./'));
 });
 
-/*
 gulp.task('release', () => {
-  //release();
-  return gitFlowBumpType()
-  .then(function (bumpTo) {
-    console.log('Bump to: ' bumpTo);
-    // Would log 'major', 'minor', or 'patch'
-  });
+  release();
+
   console.log('released');
 });
 
-
-*/
 gulp.task('cbump', () => {
   console.log('bump');
   //conventionalRecommendedBump({
