@@ -1,41 +1,54 @@
 {
-	"name": "semantic-release-gitflow",
-	"version": "0.3.0",
-	"description": "Semantic release for [gitflow](https://github.com/petervanderdoes/gitflow)",
-	"main": "index.js",
-	"scripts": {
-		"test": "mocha"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/gitawego/semantic-release-gitflow.git"
-	},
-	"author": {
-		"name": "Hongbo LU",
-		"email": "gitawego@gmail.com",
-		"url": "https://github.com/gitawego"
-	},
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/gitawego/semantic-release-gitflow/issues"
-	},
-	"homepage": "https://github.com/gitawego/semantic-release-gitflow#readme",
-	"dependencies": {
-		"conventional-changelog": "0.1.0-alpha.2",
-		"conventional-recommended-bump": "0.0.2",
-		"semver": "^4.3.6",
-		"shelljs": "^0.5.1",
-		"through2": "^2.0.0"
-	},
-	"devDependencies": {
-		"chai": "^3.0.0",
-		"mocha": "^2.2.5"
-	},
-	"readme": "# semantic-release-gitflow\r\n\r\nSemantic release for [gitflow](https://github.com/petervanderdoes/gitflow)\r\n\r\npackage version will be updated automatically based on recommendation of conventional changelog\r\n\r\n##INSTALLATION\r\n```shell\r\nnpm install gitawego/semantic-release-gitflow --save-dev \r\n```\r\n##HOWTO\r\n```js\r\nvar release = require('semantic-release-gitflow');\r\nrelease({\r\n    path:'directory/of/project', //optional\r\n    bump:{}, //optional,\r\n    changelog:{} //optional\r\n},callback);\r\n```\r\n\r\n* **bump** see [conventional-recommended-bump](https://github.com/stevemao/conventional-recommended-bump) for detail\r\n* **changelog** see [conventional-changelog](https://github.com/ajoslin/conventional-changelog) for detail\r\n",
-	"readmeFilename": "README.md",
-	"_id": "semantic-release-gitflow@0.0.1",
-	"_shasum": "54e14547808675e0195f917287d583318b2c6c42",
-	"_resolved": "git://github.com/gitawego/semantic-release-gitflow#efed88441c372a785a8cbbb75b8d8909b1395cd1",
-	"_from": "git://github.com/gitawego/semantic-release-gitflow",
-	"_fromGithub": true
+  "name": "semantic-release-gitflow",
+  "version": "0.3.0",
+  "description": "Semantic release for [gitflow](https://github.com/petervanderdoes/gitflow)",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitawego/semantic-release-gitflow.git"
+  },
+  "author": {
+    "name": "Hongbo LU",
+    "email": "gitawego@gmail.com",
+    "url": "https://github.com/gitawego"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gitawego/semantic-release-gitflow/issues"
+  },
+  "homepage": "https://github.com/gitawego/semantic-release-gitflow#readme",
+  "dependencies": {
+    "conventional-changelog": "0.1.0-alpha.2",
+    "conventional-recommended-bump": "0.0.2",
+    "semver": "^4.3.6",
+    "shelljs": "^0.5.1",
+    "through2": "^2.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "jspm-git": "^0.3.3",
+    "mocha": "^2.2.5"
+  },
+  "readme": "# semantic-release-gitflow\r\n\r\nSemantic release for [gitflow](https://github.com/petervanderdoes/gitflow)\r\n\r\npackage version will be updated automatically based on recommendation of conventional changelog\r\n\r\n##INSTALLATION\r\n```shell\r\nnpm install gitawego/semantic-release-gitflow --save-dev \r\n```\r\n##HOWTO\r\n```js\r\nvar release = require('semantic-release-gitflow');\r\nrelease({\r\n    path:'directory/of/project', //optional\r\n    bump:{}, //optional,\r\n    changelog:{} //optional\r\n},callback);\r\n```\r\n\r\n* **bump** see [conventional-recommended-bump](https://github.com/stevemao/conventional-recommended-bump) for detail\r\n* **changelog** see [conventional-changelog](https://github.com/ajoslin/conventional-changelog) for detail\r\n",
+  "readmeFilename": "README.md",
+  "_id": "semantic-release-gitflow@0.0.1",
+  "_shasum": "54e14547808675e0195f917287d583318b2c6c42",
+  "_resolved": "git://github.com/gitawego/semantic-release-gitflow#efed88441c372a785a8cbbb75b8d8909b1395cd1",
+  "_from": "git://github.com/gitawego/semantic-release-gitflow",
+  "_fromGithub": true,
+  "jspm": {
+    "directories": {},
+    "configFile": "system.config.js",
+    "dependencies": {
+      "cnrp/jspm-test": "stash:cnrp/jspm-test@master"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.6.4",
+      "babel-runtime": "npm:babel-runtime@^5.6.4",
+      "core-js": "npm:core-js@^0.9.17"
+    }
+  }
 }
