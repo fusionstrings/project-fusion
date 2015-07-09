@@ -21,18 +21,26 @@ gulp.task('serve', () => {
   browserSync({
     notify: false,
     // Customize the BrowserSync console logging prefix
-    logPrefix: 'WSK',
+    logPrefix: 'PF',
     // Run as an https by uncommenting 'https: true'
     // Note: this uses an unsigned certificate which on first access
     //       will present a certificate warning in the browser.
     // https: true,
-    server: ['./']
+    //server: ['.tmp', 'app']
+    server: {
+      baseDir: ['.tmp', 'app'],
+      routes: {
+        '/bower_components': 'bower_components',
+        '/jspm_packages': 'jspm_packages',
+        '/system.config.js':'system.config.js'
+      }
+    }
   });
 
-  gulp.watch(['./**/*.html'], reload);
+  gulp.watch(['app/**/*.html'], reload);
   //gulp.watch(['./styles/**/*.{scss,css}'], ['styles', reload]);
-  gulp.watch(['./scripts/**/*.js'], reload);
-  gulp.watch(['./images/**/*'], reload);
+  gulp.watch(['app/**/*.js'], reload);
+  gulp.watch(['app/images/**/*'], reload);
 });
 
 
