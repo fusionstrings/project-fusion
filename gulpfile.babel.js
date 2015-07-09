@@ -1,17 +1,17 @@
 import gulp from 'gulp';
 import browserSync from 'browser-sync';
 import fs from 'fs-extra';
-import {merge, map} from 'event-stream';
-import series from 'stream-series';
+//import {merge, map} from 'event-stream';
+//import series from 'stream-series';
 import bump from 'gulp-bump';
 import conventionalRecommendedBump from 'conventional-recommended-bump';
 import changelog from 'conventional-changelog';
-import source from 'vinyl-source-stream';
-import buffer from 'vinyl-buffer';
-import addsrc from 'gulp-add-src';
-import concat from 'gulp-concat';
-import release from 'semantic-release-gitflow';
-import gitFlowBumpType from 'git-flow-bump-type';
+//import source from 'vinyl-source-stream';
+//import buffer from 'vinyl-buffer';
+//import addsrc from 'gulp-add-src';
+//import concat from 'gulp-concat';
+//import release from 'semantic-release-gitflow';
+//import gitFlowBumpType from 'git-flow-bump-type';
 import pkg from './package.json';
 
 const reload = browserSync.reload;
@@ -48,7 +48,7 @@ gulp.task('changelog', ['release'], () => {
   return changelog({
     repository: pkg.repository.url,
     preset: 'angular',
-    version: pkg.version,
+    //version: pkg.version,
     file: './CHANGELOG.md'
   }, (err, log) => {
     fs.writeFileSync('CHANGELOG.md', log);
@@ -61,7 +61,7 @@ gulp.task('bump', () => {
   .pipe(gulp.dest('./'));
 });
 
-gulp.task('release', [], () => {
+gulp.task('release', () => {
   //release();
   conventionalRecommendedBump({
     preset: 'angular'
