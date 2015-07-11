@@ -9,7 +9,8 @@ System.config({
   },
   "paths": {
     "github:*": "jspm_packages/github/*",
-    "npm:*": "jspm_packages/npm/*"
+    "npm:*": "jspm_packages/npm/*",
+    "stash:*": "jspm_packages/stash/*"
   }
 });
 
@@ -17,6 +18,7 @@ System.config({
   "map": {
     "babel": "npm:babel-core@5.6.7",
     "babel-runtime": "npm:babel-runtime@5.6.7",
+    "cnrp/jspm-test": "stash:cnrp/jspm-test@master",
     "core-js": "npm:core-js@0.9.18",
     "github:jspm/nodelibs-process@0.1.1": {
       "process": "npm:process@0.10.1"
