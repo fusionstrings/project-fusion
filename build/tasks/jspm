@@ -1,0 +1,15 @@
+
+gulp.task("jspm", function() {
+  return gulp.src("./jspm_packages/**/*").pipe(gulp.dest("dist/jspm_packages"));
+});
+gulp.task("js", ["eslint"], function() {
+  return gulp.src("app/**/*.js").pipe(gulp.dest("dist"));
+});
+// Bundle with jspm
+gulp.task("bundle", ["js", "jspm"], $.shell.task([
+  "cd dist; jspm bundle scripts/main scripts/main-bundle.js --inject"
+]));
+gulp.task('shorthand', $.shell.task([
+  'cd dist',
+  'dir'
+]));
