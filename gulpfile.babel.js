@@ -28,7 +28,8 @@ const babelOptions = {
     ]
   };
 const assign = Object.assign || require('object.assign');
-
+// Create karma server
+const karma = require('karma').server;
 // Optimize images
 gulp.task('images', () => {
   return gulp.src(['app/images/**', 'app/**/images/**'])
@@ -204,7 +205,7 @@ gulp.task('html', () => {
 gulp.task('clean', cb => del(['.tmp', 'dist/*', '!dist/.git'], {dot: true}, cb));
 
 // Watch files for changes & reload
-gulp.task('serve', ['styleguide'], () => {
+gulp.task('serve', ['styleguide', 'test'], () => {
   browserSync({
     notify: false,
     // Customize the BrowserSync console logging prefix
@@ -300,6 +301,14 @@ gulp.task('pagespeed', cb => {
   }, cb);
 });
 
+// Testing
+gulp.task('test', (done) => {
+  karma.start({
+    configFile: path.join(__dirname, '/karma.conf.js'),
+    singleRun: false,
+    autoWatch: true
+  }, done);
+});
 // See http://www.html5rocks.com/en/tutorials/service-worker/introduction/ for
 // an in-depth explanation of what service workers are and why you should care.
 // Generate a service worker file that will provide offline functionality for
