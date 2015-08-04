@@ -4,6 +4,7 @@
     "node": true,
     "browser": true,
     "es6": true,
+    "mocha", true
   },
   "globals": {
     "DocumentFragment": true,
