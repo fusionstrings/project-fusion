@@ -205,7 +205,7 @@ gulp.task('html', () => {
 gulp.task('clean', cb => del(['.tmp', 'dist/*', '!dist/.git'], {dot: true}, cb));
 
 // Watch files for changes & reload
-gulp.task('serve', ['styleguide', 'test'], () => {
+gulp.task('serve', ['styleguide'], () => {
   browserSync({
     notify: false,
     // Customize the BrowserSync console logging prefix
@@ -228,7 +228,7 @@ gulp.task('serve', ['styleguide', 'test'], () => {
   gulp.watch(['app/**/*.html'], reload);
   //gulp.watch(['./app/**/*.md'], ['styleguide', reload]);
   gulp.watch(['./app/**/*.{scss,css}'], ['styles', 'styleguide', reload]);
-  gulp.watch(['app/**/*.js'], ['eslint']);
+  gulp.watch(['app/**/*.js'], ['eslint', 'test']);
   gulp.watch(['app/images/**/*', 'app/**/images/**/*'], reload);
   console.log(
         '\nDeveloper mode!\n\nSC5 Styleguide available at http://localhost:3000/\n'

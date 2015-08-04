@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="description" content="A starter project for mobile first, modern web apps, which utilises JSPM, SystemJS, Bebel, ES 2015, Karma, Chai, Mocha.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Web Starter Kit</title>
+    <title>Project Fusion</title>
 
     <!-- Web Application Manifest -->
     <link rel="manifest" href="manifest.json">
@@ -36,30 +36,40 @@
     <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
-    <header class="app-bar promote-layer">
-      <div class="app-bar-container">
-        <button class="menu"><img src="images/hamburger.svg" alt="Menu"></button>
-        <h1 class="logo">Web <strong>Starter Kit</strong></h1>
-        <section class="app-bar-actions">
-        <!-- Put App Bar Buttons Here -->
-        <!-- e.g <button><i class="icon icon-star"></i></button> -->
-        </section>
-      </div>
+    <header>
+      <h1>Project fusion</h1>
     </header>
 
-    <nav class="navdrawer-container promote-layer">
-      <h4>Navigation</h4>
-      <ul>
-        <li><a href="#hello">Hello</a></li>
-        <li><a href="#get-started">Get Started</a></li>
-        <li><a href="styleguide.html">Style Guide</a></li>
-      </ul>
-    </nav>
-
     <main>
-      <h1 id="hello">Hello!</h1>
-      <p>Welcome to Web Starter Kit.</p>
+      <h2>Hello!</h1>
+      <p>Presenting ambitious, opinionated and yet highly flexible web app starter kit for modular development.</p>
+      <p>It provides following features &mdash;</p>
+      <ul>
+        <li>JSPM package manager</li>
+        <li>Support to ES6/Ecmascript 2015, AMD or common JS using System JS</li>
+        <li>Automatic semver bump based GIT commit message</li>
+        <li>Automatic release notes from GIT commit message</li>
+        <li>TDD / BDD using Karma, Mocha and Chai</li>
+        <li>Automatic styleguide generation</li>
+        <li>Styleguide variables can be chnaged from dashboard</li>
+        <li>External and internal dependency management from NPM, Bower, Github, Bitbucket, Stash or any custom private/public endpoint.</li>
+        <li>CSS as module dependency</li>
+        <li>Linting</li>
+        <li>Code coverage</li>
+      </ul>
+      <h2>Future roadmap (Work in progress)</h2>
+      <ul>
+        <li>CSS regression testing</li>
+        <li>Optimize HTML and CSS using CSS nano and HTML inspector</li>
+        <li>Virtualise / containerise development environment using Vagrant and Docker</li>
+        <li>Completely automate issue management, development, deployment and CI</li>
+        <li>Single click deployment</li>
+      </ul>
     </main>
+    <footer>
+      <p>This project is junction point for various other best in class solutions, rather than a complete innovation-</p>
+      <p>&copy; 2015</p>
+    </footer>
 
     <!-- build:js(app/) ../../scripts/main.min.js -->
     <script src="jspm_packages/system.js"></script>
