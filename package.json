@@ -1,6 +1,6 @@
 {
   "name": "project-fusion",
-  "version": "0.11.3",
+  "version": "0.11.4",
   "description": "JSPM Starter Kit",
   "main": "index.html",
   "dependencies": {},
@@ -89,7 +89,9 @@
   "jspm": {
     "directories": {},
     "configFile": "system.config.js",
-    "dependencies": {},
+    "dependencies": {
+      "cnrp/jspm-test": "stash:cnrp/jspm-test@master"
+    },
     "devDependencies": {
       "babel": "npm:babel-core@^5.6.4",
       "babel-runtime": "npm:babel-runtime@^5.6.4",
