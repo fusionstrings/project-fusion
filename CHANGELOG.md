@@ -2,6 +2,10 @@
 ### 0.11.2 (2015-08-04)
 
 
+<a name"0.11.2"></a>
+### 0.11.2 (2015-08-04)
+
+
 #### Bug Fixes
 
 * **lint:** Add rules for eslint ([0d48044b](https://www.github.com/fusionstrings/project-fusion/commit/0d48044b))
