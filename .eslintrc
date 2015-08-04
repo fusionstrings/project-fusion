@@ -1,5 +1,24 @@
 {
   "parser": "babel-eslint",
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true,
+  },
+  "globals": {
+    "DocumentFragment": true,
+    "expect": true,
+    "it": true,
+    "describe": true,
+    "beforeEach": true,
+    "runs": true,
+    "spyOn": true,
+    "spyOnEvent": true,
+    "waitsFor": true,
+    "expect": true,
+    "afterEach": true,
+    "var2": false
+  },
   "rules": {
     "strict": 0,
     "no-underscore-dangle": 0,
@@ -19,9 +38,7 @@
     "no-loop-func": 0,
     "no-unreachable": 0,
     "no-labels": 0,
-    "no-process-exit": 0
-  },
-  "env": {
-    "node": true
+    "no-process-exit": 0,
+    "quotes": [1, "single"]
   }
 }

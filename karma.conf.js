@@ -44,9 +44,9 @@ module.exports = function(config) {
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
-      'app/**/!(*spec).js': ['babel', 'coverage']
-    },
+    //preprocessors: {
+      //'app/**/!(*spec).js': ['babel', 'coverage']
+   // },
 
     // transpile with babel since the coverage reporter throws error on ES6 syntax
     babelPreprocessor: {
