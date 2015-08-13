@@ -64,7 +64,7 @@ https://github.com/ajoslin/conventional-changelog/blob/master/conventions/angula
 #### Create release
 
 ```sh
-$ gulp changelog
+$ gulp release
 ```
 #### Create and install private end points
 

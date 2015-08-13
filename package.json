@@ -1,6 +1,6 @@
 {
   "name": "project-fusion",
-  "version": "0.11.4",
+  "version": "0.11.6",
   "description": "JSPM Starter Kit",
   "main": "index.html",
   "dependencies": {},
@@ -60,7 +60,7 @@
     "phantomjs": "^1.9.17",
     "psi": "^1.0.6",
     "run-sequence": "^1.1.1",
-    "sc5-styleguide": "^0.3.25",
+    "sc5-styleguide": "^0.3.28",
     "sinon": "^1.15.4",
     "sinon-chai": "^2.8.0",
     "sw-precache": "^2.0.0"
