@@ -1,9 +1,17 @@
 import path from 'path';
 
+function root(_path) {
+  return path.join(__dirname, _path);
+}
+
 const appRoot = 'app/';
 const outputRoot = 'dist/';
 const tmpRoot = '.tmp/';
-const karmaConf = path.join(__dirname, '../karma.conf.js');
+const karmaConf = root('../karma.conf.js');//path.join(__dirname, '../karma.conf.js');
+
+function root(_path) {
+  return path.join(__dirname, _path);
+}
 
 export default {
   root: appRoot,
@@ -31,6 +39,8 @@ export default {
       },
   doc:'./doc',
   karmaConf: karmaConf,
+  changelog: root('../CHANGELOG.md'),
+  package: root('../package.json'),
   e2eSpecsSrc: 'test/e2e/src/*.js',
   e2eSpecsDist: 'test/e2e/dist/'
 };

@@ -9,7 +9,6 @@
     "babel": "^5.8.21",
     "babel-core": "^5.8.22",
     "babel-eslint": "^4.0.5",
-    "backstopjs": "^0.5.1",
     "browser-sync": "^2.8.2",
     "chai": "^3.2.0",
     "conventional-changelog": "^0.3.2",
@@ -90,13 +89,11 @@
   "jspm": {
     "directories": {},
     "configFile": "system.config.js",
-    "dependencies": {
-      "cnrp/jspm-test": "stash:cnrp/jspm-test@master"
-    },
+    "dependencies": {},
     "devDependencies": {
-      "babel": "npm:babel-core@^5.6.4",
-      "babel-runtime": "npm:babel-runtime@^5.6.4",
-      "core-js": "npm:core-js@^0.9.17"
+      "babel": "npm:babel-core@^5.8.21",
+      "babel-runtime": "npm:babel-runtime@^5.8.20",
+      "core-js": "npm:core-js@^1.0.0"
     }
   }
 }
