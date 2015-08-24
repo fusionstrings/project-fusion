@@ -10,13 +10,11 @@ System.config({
   paths: {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*",
-    "stash:*": "jspm_packages/stash/*"
   },
 
   map: {
     "babel": "npm:babel-core@5.8.22",
     "babel-runtime": "npm:babel-runtime@5.8.20",
-    "cnrp/jspm-test": "stash:cnrp/jspm-test@master",
     "core-js": "npm:core-js@1.1.0",
     "github:jspm/nodelibs-process@0.1.1": {
       "process": "npm:process@0.10.1"
