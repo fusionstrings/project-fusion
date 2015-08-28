@@ -1,1 +1,8 @@
-@import '../fuses/fuse-hello/hello'
+@import '../fuses/fuse-hello/hello';
+div {
+  lost-column: 1/4;
+}
+a {
+    display: flex;
+    color: rgba(155, 255, 236, 0.5);
+}
