@@ -42,5 +42,6 @@ export default {
   changelog: root('../CHANGELOG.md'),
   package: root('../package.json'),
   e2eSpecsSrc: 'test/e2e/src/*.js',
-  e2eSpecsDist: 'test/e2e/dist/'
+  e2eSpecsDist: 'test/e2e/dist/',
+  build: outputRoot + '**/*'
 };
