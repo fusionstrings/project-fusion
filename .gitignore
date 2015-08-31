@@ -32,3 +32,6 @@ node_modules
 jspm_packages
 
 *.orig
+
+backstop_data
+backstop.json

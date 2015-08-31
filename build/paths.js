@@ -35,9 +35,11 @@ export default {
   serveAltPaths: {
         '/bower_components': 'bower_components',
         '/jspm_packages': 'jspm_packages',
+        '/node_modules': 'node_modules',
         '/system.config.js':'system.config.js'
       },
   doc:'./doc',
+  backstop: './node_modules/backstopjs',
   karmaConf: karmaConf,
   changelog: root('../CHANGELOG.md'),
   package: root('../package.json'),
