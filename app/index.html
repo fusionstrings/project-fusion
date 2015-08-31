@@ -74,8 +74,11 @@
     <!-- build:js(app/) ../../scripts/main.min.js -->
     <script src="jspm_packages/system.js"></script>
     <script src="system.config.js"></script>
+
+    <script src="node_modules/html-inspector/html-inspector.js"></script>
     <script>
         System.import('scripts/main');
+        HTMLInspector.inspect();
     </script>
     <!-- endbuild -->
 

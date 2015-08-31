@@ -50,6 +50,15 @@ It'll open browsersync development server at http://localhost:3001/ and Stylegui
 $ gulp serve:dist
 ```
 
+#### CSS regression testing
+It uses [BackstopJS](https://github.com/garris/BackstopJS) for regression testing. To bypass running commands from `node_modules/backstopjs` folder I've aded following wrappers.
+
+```sh
+$ gulp gen-css-config # To generate Backstop config alternative to genConfig
+$ gulp reference-css # To generate reference images alternative to reference
+$ gulp test-css # To generate reference images alternative to test
+```
+
 #### Create build
 
 ```sh
@@ -104,11 +113,11 @@ It's recommended to install modules as external packages but application code in
 *   CSS as module dependency
 *   Linting
 *   Code coverage
+*   CSS regression testing
+*   Optimize HTML and CSS using CSS nano and HTML inspector
 
 ## Future roadmap (Work in progress)
 
-*   CSS regression testing
-*   Optimize HTML and CSS using CSS nano and HTML inspector
 *   Virtualise / containerise development environment using Vagrant and Docker
 *   Completely automate issue management, development, deployment and CI
 *   Single click deployment
