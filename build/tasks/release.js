@@ -34,7 +34,7 @@ gulp.task('release', cb => {
   runSequence(
     'bump',
     'changelog',
-    'deploy'
+    'deploy',
     cb
   );
 });
