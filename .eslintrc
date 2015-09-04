@@ -20,6 +20,9 @@
     "afterEach": true,
     "var2": false
   },
+  "ecmaFeatures": {
+    "modules": true
+  },
   "rules": {
     "strict": 0,
     "no-underscore-dangle": 0,

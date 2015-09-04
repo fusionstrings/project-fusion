@@ -6,9 +6,12 @@ const $ = gulpLoadPlugins();
 // Scan your HTML for assets & optimize them
 gulp.task('templates', () => {
   const assets = $.useref.assets({searchPath: '{' + paths.root + ',' + paths.tmp + '}'});
-
+  $.nunjucksRender.nunjucks.configure([paths.root], { watch: false }); //gulp-nunjucks-render
   return gulp.src(paths.templates)
+    .pipe($.if('*.nunjucks', $.nunjucksRender()))
+
     .pipe(assets)
+
     // Remove any unused CSS
     // Note: If not using the Style Guide, you can delete it from
     // the next line to only include styles your project uses.

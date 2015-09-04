@@ -1,5 +1,19 @@
-<a name="0.11.8"></a>
-## [0.11.8](//compare/0.11.7-pre-alpha...v0.11.8) (2015-08-31)
+<a name="0.13.0"></a>
+# [0.13.0](//compare/v0.12.0...v0.13.0) (2015-09-04)
+
+
+### Bug Fixes
+
+* **setup:** Add version tag for casperjs f939f79
+
+### Features
+
+* **lint:** Add JSCS for Javascript stylecheck 3de0c35
+
+
+
+<a name="0.12.0"></a>
+# [0.12.0](//compare/0.11.7-pre-alpha...v0.12.0) (2015-08-31)
 
 
 ### Features

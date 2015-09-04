@@ -7,10 +7,11 @@ const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
 //Lint JavaScript
-gulp.task('eslint', function () {
+gulp.task('eslint', () => {
   return gulp.src(paths.scripts)
-    .pipe(reload({stream: true, once: true}))
+    .pipe(reload({ stream: true, once: true }))
     .pipe($.eslint())
     .pipe($.eslint.format())
-    .pipe($.if(!browserSync.active, $.eslint.failOnError()));
+    .pipe($.if(!browserSync.active, $.eslint.failOnError()))
+    .pipe($.jscs());
 });
