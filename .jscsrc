@@ -1,5 +1,6 @@
 {
   "preset": "google",
   "disallowSpacesInAnonymousFunctionExpression": null,
-  "excludeFiles": ["node_modules/**"]
+  "excludeFiles": ["node_modules/**", "jspm_packeges/**"],
+  "esnext": true
 }
