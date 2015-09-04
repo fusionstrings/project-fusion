@@ -1,3 +1,5 @@
+[ ![Codeship Status for fusionstrings/project-fusion](https://codeship.com/projects/5d2be810-351d-0133-6d1a-16e7f2139dbb/status?branch=master)](https://codeship.com/projects/100679)
+
 #Project Fusion
 
 ## Hello there!
