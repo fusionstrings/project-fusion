@@ -53,12 +53,12 @@
     "jspm": "^0.16.2",
     "jspm-git": "^0.3.3",
     "karma": "^0.13.9",
-    "karma-babel-preprocessor": "^5.2.1",
+    "karma-babel-preprocessor": "^5.2.2",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.2.0",
     "karma-coverage": "git://github.com/douglasduteil/karma-coverage#next",
     "karma-jasmine": "^0.3.6",
-    "karma-jspm": "^2.0.1-beta.2",
+    "karma-jspm": "^2.0.1",
     "karma-mocha": "^0.2.0",
     "karma-mocha-reporter": "^1.1.1",
     "karma-phantomjs-launcher": "^0.2.1",
@@ -100,7 +100,9 @@
   "jspm": {
     "directories": {},
     "configFile": "system.config.js",
-    "dependencies": {},
+    "dependencies": {
+      "fusionstrings/jspm-test-module": "bitbucket:fusionstrings/jspm-test-module@master"
+    },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.21",
       "babel-runtime": "npm:babel-runtime@^5.8.20",

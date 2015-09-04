@@ -59,7 +59,7 @@ module.exports = function(config) {
       }
     },
     preprocessors: {
-      'app/**/!(*spec).js': ['babel', 'sourcemap', 'coverage']
+      'app/**/*.js': ['babel', 'sourcemap', 'coverage']
     },
 
     coverageReporter: {
