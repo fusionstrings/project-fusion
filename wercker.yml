@@ -22,7 +22,9 @@ build:
   # Read more about steps on our dev center:
   # http://devcenter.wercker.com/docs/steps/index.html
   steps:
-    # A step that executes `npm install` command
+    # A step that executes `npm install` commandsteps:
+    - add-to-known_hosts:
+        hostname: ssh://git@bitbucket.org
     - add-ssh-key:
         keyname: bitb
         
