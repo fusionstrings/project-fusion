@@ -31,7 +31,11 @@ build:
           jspm config registries.bitbucket.handler jspm-git
         
     - npm-install
-    - jspm-install
+    
+    - script:
+        name: install JSPM dependencies
+        code: jspm install
+        
     # A step that executes `npm test` command
     - npm-test
 
