@@ -24,9 +24,10 @@ build:
   steps:
     # A step that executes `npm install` commandsteps:
     - add-to-known_hosts:
-        hostname: ssh://git@bitbucket.org
+        hostname: bitbucket.org
+        
     - add-ssh-key:
-        keyname: bitb
+        keyname: BITB
         
     - script:
         name: install global npm packages
