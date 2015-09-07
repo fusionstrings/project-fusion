@@ -24,6 +24,7 @@ build:
   steps:
     # A step that executes `npm install` command
     - npm-install
+	- jspm-install
     # A step that executes `npm test` command
     - npm-test
 
