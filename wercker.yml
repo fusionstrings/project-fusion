@@ -23,8 +23,15 @@ build:
   # http://devcenter.wercker.com/docs/steps/index.html
   steps:
     # A step that executes `npm install` command
+    - script:
+        name: install global npm packages
+        code: |
+          npm install -g gulp karma jspm babel-core phantomjs casperjs@1.1.0-beta3
+          jspm config registries.bitbucket.baseurl ssh://git@bitbucket.org
+          jspm config registries.bitbucket.handler jspm-git
+        
     - npm-install
-	- jspm-install
+    - jspm-install
     # A step that executes `npm test` command
     - npm-test
 
