@@ -1,3 +1,5 @@
+[![wercker status](https://app.wercker.com/status/dd129b2edaa49f0b49698d108f209a83/m "wercker status")](https://app.wercker.com/project/bykey/dd129b2edaa49f0b49698d108f209a83)
+
 [ ![Codeship Status for fusionstrings/project-fusion](https://codeship.com/projects/5d2be810-351d-0133-6d1a-16e7f2139dbb/status?branch=master)](https://codeship.com/projects/100679)
 
 #Project Fusion
@@ -5,6 +7,22 @@
 ## Hello there!
 
 Presenting ambitious, opinionated and yet highly flexible web app starter kit for modular development.
+
+### Features —
+
+*   JSPM package manager
+*   Support to ES6/Ecmascript 2015, AMD or common JS using System JS
+*   Automatic semver bump based GIT commit message
+*   Automatic release notes from GIT commit message
+*   TDD / BDD using Karma, Mocha and Chai
+*   Automatic styleguide generation
+*   Styleguide variables can be changed from dashboard
+*   External and internal dependency management from NPM, Bower, Github, Bitbucket, Stash or any custom private/public endpoint.
+*   CSS as module dependency
+*   Linting
+*   Code coverage
+*   CSS regression testing
+*   Optimize HTML and CSS using CSS nano and HTML inspector
 
 ## How to use
 
@@ -100,23 +118,6 @@ It's recommended to install modules as external packages but application code in
  * A module shall be self sufficient and should not directly depend on other packages. It should be treated as separate repository even if it's part of main code base.
  * All releated assets e.g. CSS, tests, JS etc should go in module folder or `styles`, `scripts`, `images`, `tests`, `fonts` subfolders.
  * Test files should suffix `.spec`.
-
-
-### It provides following features —
-
-*   JSPM package manager
-*   Support to ES6/Ecmascript 2015, AMD or common JS using System JS
-*   Automatic semver bump based GIT commit message
-*   Automatic release notes from GIT commit message
-*   TDD / BDD using Karma, Mocha and Chai
-*   Automatic styleguide generation
-*   Styleguide variables can be changed from dashboard
-*   External and internal dependency management from NPM, Bower, Github, Bitbucket, Stash or any custom private/public endpoint.
-*   CSS as module dependency
-*   Linting
-*   Code coverage
-*   CSS regression testing
-*   Optimize HTML and CSS using CSS nano and HTML inspector
 
 ### Future roadmap (Work in progress)
 

@@ -22,8 +22,30 @@ build:
   # Read more about steps on our dev center:
   # http://devcenter.wercker.com/docs/steps/index.html
   steps:
-    # A step that executes `npm install` command
+    # A step that executes `npm install` commandsteps:
+    - add-to-known_hosts:
+        hostname: bitbucket.org
+        
+    - add-ssh-key:
+        keyname: BITB
+        
+    - script:
+        name: install global npm packages
+        code: |
+          npm install -g gulp karma jspm babel-core phantomjs casperjs@1.1.0-beta3
+          
+    - script:
+        name: Add private jspm registry
+        code: |
+          jspm config registries.bitbucket.baseurl ssh://git@bitbucket.org
+          jspm config registries.bitbucket.handler jspm-git
+        
     - npm-install
+    
+    - script:
+        name: install JSPM dependencies
+        code: jspm install
+        
     # A step that executes `npm test` command
     - npm-test
 
