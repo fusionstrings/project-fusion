@@ -4,7 +4,7 @@
 
 #Project Fusion
 
-## Hello there!
+## Hello!
 
 Presenting ambitious, opinionated and yet highly flexible web app starter kit for modular development.
 
