@@ -59,7 +59,7 @@ build:
 
 deploy:
   steps:
-    - gh-pages:
+    - lukevivier/gh-pages:
         token: $GIT_TOKEN
         domain: project-fusion.fusionstrings.com
         basedir: dist
