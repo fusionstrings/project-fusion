@@ -60,6 +60,6 @@ build:
 deploy:
   steps:
     - lukevivier/gh-pages:
-        token: DGHP
+        token: $GIT_TOKEN
         domain: project-fusion.fusionstrings.com
         basedir: dist
