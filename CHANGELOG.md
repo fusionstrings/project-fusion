@@ -1,3 +1,17 @@
+<a name="0.14.0"></a>
+# [0.14.0](//compare/v0.13.5...v0.14.0) (2015-09-08)
+
+
+### Bug Fixes
+
+* **build:** add missing gulp task 3f682a1
+
+### Features
+
+* **deploy:** add auto deploy to github pages ca63aad
+
+
+
 <a name="0.13.5"></a>
 ## [0.13.5](//compare/v0.13.4...v0.13.5) (2015-09-07)
 
