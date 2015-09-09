@@ -45,6 +45,7 @@ build:
     - script:
         name: Add private jspm registry
         code: |
+          jspm config registries.github.timeouts.lookup 120
           jspm config registries.bitbucket.baseurl ssh://git@bitbucket.org
           jspm config registries.bitbucket.handler jspm-git
         
