@@ -48,7 +48,7 @@ gulp.task('styleguide:dist:generate', function() {
     .pipe(styleguide.generate({
         title: 'My First Hosted Styleguide Build',
         rootPath: paths.outputStyleguide,
-        //appRoot: '/',
+        appRoot: paths.outputStyleguidePath,
         overviewPath: paths.styleguideOverview
       }))
     .pipe(gulp.dest(paths.outputStyleguide));
