@@ -1,10 +1,11 @@
-<a name="0.14.1"></a>
-## [0.14.1](//compare/v0.14.0...v0.14.1) (2015-09-09)
+<a name="0.14.2"></a>
+## [0.14.2](//compare/v0.14.1...v0.14.2) (2015-09-09)
 
 
 ### Bug Fixes
 
 * **build:** Fix JSPM github timeout c0a9a15
+* **styleguide:** fix styleguide output path 436e86a
 
 
 

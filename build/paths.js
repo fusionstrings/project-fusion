@@ -31,6 +31,7 @@ export default {
   outputImages: `${outputRoot}images`,
   outputFonts: `${outputRoot}fonts`,
   outputStyleguide: `${outputRoot}styleguide`,
+  outputStyleguidePath: '/styleguide',
   tmp: tmpRoot,
   tmpStyle: `${tmpRoot}styles`,
   tmpStyleguide: `${tmpRoot}styleguide`,
