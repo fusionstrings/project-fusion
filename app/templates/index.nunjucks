@@ -1,0 +1,27 @@
+      {% extends "templates/base.nunjucks" %}
+      {% block main %}
+      <h2>Hello!</h2>
+      <p>Presenting ambitious, opinionated and yet highly flexible web app starter kit for modular development.</p>
+      <p>It provides following features &mdash;</p>
+      <ul>
+        <li>JSPM package manager</li>
+        <li>Support to ES6/Ecmascript 2015, AMD or common JS using System JS</li>
+        <li>Automatic semver bump based GIT commit message</li>
+        <li>Automatic release notes from GIT commit message</li>
+        <li>TDD / BDD using Karma, Mocha and Chai</li>
+        <li>Automatic styleguide generation</li>
+        <li>Styleguide variables can be chnaged from dashboard</li>
+        <li>External and internal dependency management from NPM, Bower, Github, Bitbucket, Stash or any custom private/public endpoint.</li>
+        <li>CSS as module dependency</li>
+        <li>Linting</li>
+        <li>Code coverage</li>
+      </ul>
+      <h2>Future roadmap (Work in progress)</h2>
+      <ul>
+        <li>CSS regression testing</li>
+        <li>Optimize HTML and CSS using CSS nano and HTML inspector</li>
+        <li>Virtualise / containerise development environment using Vagrant and Docker</li>
+        <li>Completely automate issue management, development, deployment and CI</li>
+        <li>Single click deployment</li>
+      </ul>
+      {% endblock %}
