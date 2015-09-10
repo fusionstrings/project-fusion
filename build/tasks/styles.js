@@ -3,7 +3,7 @@ import lost from 'lost';
 import cssnano from 'cssnano';
 import doiuse from 'doiuse';
 import rucksack from 'rucksack-css';
-import autoprefixer from 'autoprefixer-core';
+import autoprefixer from 'autoprefixer';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import paths from '../paths';
 const $ = gulpLoadPlugins();
