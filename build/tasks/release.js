@@ -130,7 +130,7 @@ gulp.task('release', function (callback) {
     'fetch',
     'pull-master',
     'merge-master',
-    'commit-changes-master',
+    //'commit-changes-master',
     'push-changes-master',
     'create-new-tag',
     'github-release',
