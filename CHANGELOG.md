@@ -1,5 +1,5 @@
-<a name="0.14.4"></a>
-## [0.14.4](//compare/0.14.3...v0.14.4) (2015-09-11)
+<a name="0.15.0"></a>
+# [0.15.0](//compare/0.14.3...v0.15.0) (2015-09-11)
 
 
 ### Bug Fixes
@@ -9,6 +9,10 @@
 * **nunjucks:** serve compiled nunjucks from tmp folder and watch during development bbc36f3
 * **nunjucks:** serve compiled nunjucks from tmp folder and watch during development 22322c6
 * **release:** fix release bug d238463
+
+### Features
+
+* **release:** remove all github releases 0b9b182
 
 
 
