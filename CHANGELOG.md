@@ -1,11 +1,33 @@
+<a name="0.14.3"></a>
+## [0.14.3](//compare/v0.14.2...v0.14.3) (2015-09-11)
+
+
+### Bug Fixes
+
+* **gulp:** Add template task as dependency to gulp serve 06ee2b7
+* **gulp:** Add template task as dependency to gulp serve 0b81d7f
+* **nunjucks:** serve compiled nunjucks from tmp folder and watch during development bbc36f3
+* **nunjucks:** serve compiled nunjucks from tmp folder and watch during development 22322c6
+
+
+
 <a name="0.14.2"></a>
 ## [0.14.2](//compare/v0.14.1...v0.14.2) (2015-09-09)
 
 
 ### Bug Fixes
 
-* **build:** Fix JSPM github timeout c0a9a15
 * **styleguide:** fix styleguide output path 436e86a
+
+
+
+<a name="0.14.1"></a>
+## [0.14.1](//compare/v0.14.0...v0.14.1) (2015-09-09)
+
+
+### Bug Fixes
+
+* **build:** Fix JSPM github timeout c0a9a15
 
 
 

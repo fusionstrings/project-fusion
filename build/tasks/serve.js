@@ -5,7 +5,7 @@ import paths from '../paths';
 const reload = browserSync.reload;
 
 // Watch files for changes & reload
-gulp.task('serve', ['styles', 'styleguide'], () => {
+gulp.task('serve', ['styles', 'styleguide', 'templates'], () => {
   browserSync({
     notify: false,
     // Customize the BrowserSync console logging prefix
@@ -21,7 +21,8 @@ gulp.task('serve', ['styles', 'styleguide'], () => {
     }
   });
 
-  gulp.watch([paths.templates], reload);
+  gulp.watch([paths.templates], ['templates', reload]);
+  //gulp.watch([paths.templatesNunjucks], ['nunjucks', reload]);
   //gulp.watch(['./app/**/*.md'], ['styleguide', reload]);
   gulp.watch(paths.styles, ['styles', 'styleguide', reload]);
   gulp.watch([paths.scripts], ['eslint', 'test']);
