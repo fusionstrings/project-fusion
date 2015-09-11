@@ -4,6 +4,7 @@ import runSequence from 'run-sequence';
 import conventionalRecommendedBump from 'conventional-recommended-bump';
 import conventionalChangelog from 'conventional-changelog';
 import conventionalGithubReleaser from 'conventional-github-releaser';
+import githubRemoveAllReleases  from 'github-remove-all-releases';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import paths from '../paths';
 
@@ -59,6 +60,13 @@ gulp.task('github-release', done => {
     preset: 'angular', // Or to any other commit message convention you use.
     releaseCount: 0
   }, done);
+});
+
+gulp.task('github-remove-all-releases', done => {
+  githubRemoveAllReleases({
+    type: "oauth",
+    token: process.env.CONVENTIONAL_GITHUB_RELEASER_TOKEN // change this to your own GitHub token or use an environment variable
+  }, 'fusionstrings', 'project-fusion', done);
 });
 
 gulp.task('commit-changes-dev', () => {
