@@ -5,7 +5,7 @@ import paths from '../paths';
 const reload = browserSync.reload;
 
 // Watch files for changes & reload
-gulp.task('serve', ['styles', 'styleguide', 'nunjucks'], () => {
+gulp.task('serve', ['styles', 'styleguide', 'templates'], () => {
   browserSync({
     notify: false,
     // Customize the BrowserSync console logging prefix
