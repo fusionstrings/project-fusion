@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import fs from 'fs-extra';
 import runSequence from 'run-sequence';
 import conventionalRecommendedBump from 'conventional-recommended-bump';
-//import conventionalChangelog from 'conventional-changelog';
+import conventionalChangelog from 'conventional-changelog';
 import conventionalGithubReleaser from 'conventional-github-releaser';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import paths from '../paths';
@@ -31,7 +31,16 @@ gulp.task('bump-version', () => {
 });
 
 gulp.task('changelog', () => {
-  return gulp.src(paths.changelog, {
+  return conventionalChangelog({
+    preset: 'angular',
+    releaseCount: 0
+  })
+  .pipe(fs.createWriteStream(paths.changelog));
+});
+
+/*
+gulp.task('changelog', () => {
+  return gulp.src('CHANGELOG.md', {
     read: false
   })
     .pipe($.conventionalChangelog({
@@ -40,6 +49,7 @@ gulp.task('changelog', () => {
     }))
     .pipe(gulp.dest('./'));
 });
+*/
 
 gulp.task('github-release', done => {
   conventionalGithubReleaser({
