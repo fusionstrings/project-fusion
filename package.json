@@ -1,6 +1,6 @@
 {
   "name": "project-fusion",
-  "version": "0.14.4",
+  "version": "0.14.2",
   "description": "JSPM Starter Kit",
   "main": "index.html",
   "dependencies": {},
