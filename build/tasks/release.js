@@ -63,7 +63,7 @@ gulp.task('github-release', done => {
 
 gulp.task('commit-changes-dev', () => {
   return gulp.src('.')
-    .pipe($.git.commit('[Prerelease] Bumped version number'));
+    .pipe($.git.commit('[Prerelease] Bumped version number from dev'));
 });
 
 gulp.task('push-changes-dev', cb => {
@@ -84,7 +84,7 @@ gulp.task('fetch', () => {
 });
 
 gulp.task('pull-master', () => {
-  $.git.pull('origin', 'master', {args: '--rebase'}, err => {
+  $.git.pull('origin', 'master', err => {
     if (err) throw err;
   });
 });
