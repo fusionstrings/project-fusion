@@ -1,5 +1,5 @@
-<a name="0.15.0"></a>
-# [0.15.0](//compare/0.15.0...v0.15.0) (2015-09-11)
+<a name="0.15.1"></a>
+## [0.15.1](//compare/0.15.1...v0.15.1) (2015-09-12)
 
 
 ### Bug Fixes
@@ -12,6 +12,7 @@
 
 ### Features
 
+* **release:** add automated github release 458fb59
 * **release:** remove all github releases 0b9b182
 
 
