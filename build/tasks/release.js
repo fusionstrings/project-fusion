@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import fs from 'fs-extra';
 import runSequence from 'run-sequence';
 import conventionalRecommendedBump from 'conventional-recommended-bump';
-import conventionalChangelog from 'conventional-changelog';
+import changelog from 'conventional-changelog';
 import conventionalGithubReleaser from 'conventional-github-releaser';
 import githubRemoveAllReleases  from 'github-remove-all-releases';
 import gulpLoadPlugins from 'gulp-load-plugins';
@@ -32,13 +32,21 @@ gulp.task('bump-version', () => {
 });
 
 gulp.task('changelog', () => {
-  return conventionalChangelog({
+  return changelog({
     preset: 'angular',
     releaseCount: 0
   })
   .pipe(fs.createWriteStream(paths.changelog));
 });
-
+gulp.task('conventional-changelog', function () {
+  return gulp.src('CHANGELOG.md', {
+    buffer: false
+  })
+    .pipe($.conventionalChangelog({
+      preset: 'angular'
+    }))
+    .pipe(gulp.dest('./'));
+});
 /*
 gulp.task('changelog', () => {
   return gulp.src('CHANGELOG.md', {
@@ -71,7 +79,7 @@ gulp.task('github-remove-all-releases', done => {
 
 gulp.task('commit-changes-dev', () => {
   return gulp.src('.')
-    .pipe($.git.commit('[Prerelease] Bumped version number from dev'));
+    .pipe($.git.commit('[Prerelease] Bumped version number'));
 });
 
 gulp.task('push-changes-dev', cb => {
@@ -128,20 +136,20 @@ gulp.task('create-new-tag', cb => {
   };
 });
 
-gulp.task('release', function (callback) {
+gulp.task('release', callback => {
   runSequence(
     'bump-version',
     'changelog',
-    'commit-changes-dev',
-    'push-changes-dev',
-    'checkout-master',
-    'fetch',
-    'pull-master',
-    'merge-master',
+    //'commit-changes-dev',
+    //'push-changes-dev',
+    //'checkout-master',
+    //'fetch',
+    //'pull-master',
+    //'merge-master',
     //'commit-changes-master',
-    'push-changes-master',
-    'create-new-tag',
-    'github-release',
+    //'push-changes-master',
+    //'create-new-tag',
+    //'github-release',
     error => {
       if (error) {
         console.log(error.message);
@@ -150,4 +158,8 @@ gulp.task('release', function (callback) {
       }
       callback(error);
     });
+});
+
+gulp.task('release2', () => {
+
 });
