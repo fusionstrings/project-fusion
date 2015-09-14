@@ -12,7 +12,7 @@ const $ = gulpLoadPlugins();
 
 
 
-gulp.task('bump-version', () => {
+gulp.task('bump', () => {
 // We hardcode the version change type to 'patch' but it may be a good idea to
 // use minimist (https://www.npmjs.com/package/minimist) to determine with a
 // command argument whether you are doing a 'major', 'minor' or a 'patch' change.
@@ -38,6 +38,7 @@ gulp.task('changelog', () => {
   })
   .pipe(fs.createWriteStream(paths.changelog));
 });
+
 gulp.task('conventional-changelog', function () {
   return gulp.src('CHANGELOG.md', {
     buffer: false
@@ -138,18 +139,9 @@ gulp.task('create-new-tag', cb => {
 
 gulp.task('release', callback => {
   runSequence(
-    'bump-version',
+    'bump',
     'changelog',
-    //'commit-changes-dev',
-    //'push-changes-dev',
-    //'checkout-master',
-    //'fetch',
-    //'pull-master',
-    //'merge-master',
-    //'commit-changes-master',
-    //'push-changes-master',
-    //'create-new-tag',
-    //'github-release',
+    //'conventional-changelog',
     error => {
       if (error) {
         console.log(error.message);
@@ -160,6 +152,27 @@ gulp.task('release', callback => {
     });
 });
 
-gulp.task('release2', () => {
+gulp.task('release:full', () => {
+  runSequence(
+    'bump',
+    'changelog',
+    'commit-changes-dev',
+    'push-changes-dev',
+    'checkout-master',
+    'fetch',
+    'pull-master',
+    'merge-master',
+    //'commit-changes-master',
+    'push-changes-master',
+    'create-new-tag',
+    'github-release',
+    error => {
+      if (error) {
+        console.log(error.message);
+      } else {
+        console.log('RELEASE FINISHED SUCCESSFULLY');
+      }
+      callback(error);
+    });
 
 });

@@ -85,7 +85,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://www.github.com/fusionstrings/project-fusion"
+    "url": "fusionstrings/project-fusion"
   },
   "keywords": [
     "JSPM",
