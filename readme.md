@@ -95,8 +95,22 @@ https://github.com/ajoslin/conventional-changelog/blob/master/conventions/angula
 ```sh
 $ gulp release
 ```
-#### Create and install private end points
 
+#### Autogenerate github changelog
+
+```sh
+$ gulp github-release
+```
+
+**Note**- Due to known issue `gulp release` does not include latest release in `CHANGELOG.md`. For workaround run following tasks in sequence.
+
+```sh
+$ gulp bump
+$ gulp changelog
+$ gulp github-release
+```
+
+#### Create and install private end points
 
 ```sh
 $ jspm registry config stash
@@ -107,6 +121,11 @@ Where stash is name of custom endpoint. It will prompt for repository server URL
 $ jspm install stash:projname/reponame
 ```
 Configure as many endpoints as required.
+
+### Auto configure registry
+
+https://github.com/jspm/jspm-cli/wiki/Registries#auto-configuring-registries
+
 
 ### Modules organization
 It's recommended to install modules as external packages but application code in single application also  can be organized as modules. How modules are organized is totally depends on project but following is recommended way for it.
