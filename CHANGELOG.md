@@ -1,5 +1,5 @@
-<a name="0.16.1"></a>
-## [0.16.1](https://github.com/fusionstrings/project-fusion/compare/v0.16.0...v0.16.1) (2015-09-14)
+<a name="0.16.2"></a>
+## [0.16.2](https://github.com/fusionstrings/project-fusion/compare/v0.16.1...v0.16.2) (2015-09-15)
 
 
 ### Bug Fixes
