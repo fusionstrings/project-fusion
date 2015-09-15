@@ -1,9 +1,10 @@
-<a name="0.16.2"></a>
-## [0.16.2](https://github.com/fusionstrings/project-fusion/compare/v0.16.1...v0.16.2) (2015-09-15)
+<a name="0.16.3"></a>
+## [0.16.3](https://github.com/fusionstrings/project-fusion/compare/v0.16.2...v0.16.3) (2015-09-15)
 
 
 ### Bug Fixes
 
+* **dotfile:** fix syntax error in .eslintrc file ([e294cdc](https://github.com/fusionstrings/project-fusion/commit/e294cdc))
 * **gulp:** Add template task as dependency to gulp serve ([06ee2b7](https://github.com/fusionstrings/project-fusion/commit/06ee2b7))
 * **gulp:** Add template task as dependency to gulp serve ([0b81d7f](https://github.com/fusionstrings/project-fusion/commit/0b81d7f))
 * **nunjucks:** serve compiled nunjucks from tmp folder and watch during development ([bbc36f3](https://github.com/fusionstrings/project-fusion/commit/bbc36f3))
