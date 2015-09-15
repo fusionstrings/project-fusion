@@ -25,7 +25,7 @@ gulp.task('styles', () => {
   // For best performance, don't add Sass partials to `gulp.src`
   return gulp.src(paths.styles)
     .pipe($.plumber())
-    .pipe($.changed(paths.tmpStyle, {extension: '.css'}))
+    .pipe($.newer({dest: paths.tmpStyle, ext: '.css'}))
     .pipe($.sourcemaps.init())
     .pipe($.sass.sync({
       precision: 10,
