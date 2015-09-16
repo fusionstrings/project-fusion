@@ -152,7 +152,7 @@ gulp.task('release', callback => {
     });
 });
 
-gulp.task('release:full', () => {
+gulp.task('release:full', callback => {
   runSequence(
     'bump',
     'changelog',
@@ -174,5 +174,4 @@ gulp.task('release:full', () => {
       }
       callback(error);
     });
-
 });

@@ -5,7 +5,7 @@ import paths from '../paths';
 const reload = browserSync.reload;
 
 // Watch files for changes & reload
-gulp.task('serve', ['styles', 'styleguide', 'templates'], () => {
+gulp.task('serve', ['styles', 'styleguide', 'templates', 'esdoc'], () => {
   browserSync({
     notify: false,
     // Customize the BrowserSync console logging prefix
@@ -25,7 +25,7 @@ gulp.task('serve', ['styles', 'styleguide', 'templates'], () => {
   //gulp.watch([paths.templatesNunjucks], ['nunjucks', reload]);
   //gulp.watch(['./app/**/*.md'], ['styleguide', reload]);
   gulp.watch(paths.styles, ['styles', 'styleguide', reload]);
-  gulp.watch([paths.scripts], ['eslint', 'test']);
+  gulp.watch([paths.scripts], ['eslint', 'test', 'esdoc']);
   gulp.watch(paths.images, reload);
   console.log(
         '\nDeveloper mode!\n\nSC5 Styleguide available at http://localhost:3000/\n'
