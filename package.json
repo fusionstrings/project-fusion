@@ -1,6 +1,6 @@
 {
   "name": "project-fusion",
-  "version": "0.16.3",
+  "version": "0.16.4",
   "description": "Boilerplate web starter kit, which is opinionated and yet flexible. Architected to get developers up and running quickly and remain agile. Highly automated and out of box supports ES6, JSPM, Gulp, Babel, Karma, Mocha. Able to auto generate style guide using SC5 styleguide and KSS syntax. CSS regression testing using Backstop jS. Nunjucks templating. Auto release (bump reomendation, changelog file generation and github auto release) based on git commit history and comments. Auto Javascript documentation generation using ESDoc. Moduler by design. Ability to configure private module dependencies.",
   "main": "index.html",
   "homepage": "http://www.project-fusion.fusionstrings.com",
