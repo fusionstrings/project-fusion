@@ -16,6 +16,7 @@ Presenting ambitious, opinionated and yet highly flexible web app starter kit fo
 *   Automatic release notes from GIT commit message
 *   TDD / BDD using Karma, Mocha and Chai
 *   Automatic styleguide generation
+*   Automatic Javascript documentation generation
 *   Styleguide variables can be changed from dashboard
 *   External and internal dependency management from NPM, Bower, Github, Bitbucket, Stash or any custom private/public endpoint.
 *   CSS as module dependency
@@ -23,6 +24,7 @@ Presenting ambitious, opinionated and yet highly flexible web app starter kit fo
 *   Code coverage
 *   CSS regression testing
 *   Optimize HTML and CSS using CSS nano and HTML inspector
+*   Completely automate issue management, development, deployment and CI
 
 ## How to use
 
@@ -62,7 +64,11 @@ $ npm install && jspm install
 $ gulp serve
 ```
 
-It'll open browsersync development server at http://localhost:3001/ and Styleguide development server dashboard can be accessed at http://localhost:3000/. BrowserSync UI can be accessed at http://localhost:3002/
+##### Development Servers
+*   BrowserSync [http://localhost:3001/](http://localhost:3001/).
+*   BrowserSync UI [http://localhost:3002/](http://localhost:3002/).
+*   Styleguide development server [http://localhost:3000/](http://localhost:3000/).
+*   ESDoc Javascript documentation development server [http://localhost:3000/docs/esdoc](http://localhost:3000/docs/esdoc).
 
 #### Serve files from distribution folder
 
@@ -141,7 +147,6 @@ It's recommended to install modules as external packages but application code in
 ### Future roadmap (Work in progress)
 
 *   Virtualise / containerise development environment using Vagrant and Docker
-*   Completely automate issue management, development, deployment and CI
 *   Single click deployment
 *   Use SighJS as task runner
 
