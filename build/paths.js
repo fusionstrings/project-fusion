@@ -32,9 +32,11 @@ export default {
   outputFonts: `${outputRoot}fonts`,
   outputStyleguide: `${outputRoot}styleguide`,
   outputStyleguidePath: '/styleguide',
+  outputEsdoc: `${outputRoot}docs/esdoc`,
   tmp: tmpRoot,
   tmpStyle: `${tmpRoot}styles`,
   tmpStyleguide: `${tmpRoot}styleguide`,
+  tmpEsdoc: `${tmpRoot}docs/esdoc`,
   serveAltPaths: {
         '/bower_components': 'bower_components',
         '/jspm_packages': 'jspm_packages',

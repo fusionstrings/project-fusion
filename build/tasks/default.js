@@ -6,7 +6,7 @@ gulp.task('default', ['clean'], cb => {
   runSequence(
     'styles',
     ['eslint', 'templates', 'scripts', 'images', 'fonts', 'copy'],
-    'styleguide:dist',
+    ['styleguide:dist', 'esdoc:dist'],
     cb
   );
 });
