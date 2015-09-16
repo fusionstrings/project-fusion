@@ -12,3 +12,12 @@ gulp.task('test', (done) => {
     autoWatch: true
   }, done);
 });
+
+// Testing
+gulp.task('test:dist', (done) => {
+  karmaServer.start({
+    configFile: paths.karmaConf,
+    singleRun: true,
+    autoWatch: false
+  }, done);
+});
