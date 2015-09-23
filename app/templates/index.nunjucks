@@ -1,4 +1,4 @@
-      {% extends "templates/base.nunjucks" %}
+      {% extends "templates/layout/_base.nunjucks" %}
       {% block main %}
       <h2>Hello!</h2>
       <p>Presenting ambitious, opinionated and yet highly flexible web app starter kit for modular development.</p>

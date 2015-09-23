@@ -44,7 +44,7 @@
   <body>
     <header>
     {% block header %}
-      <h1>Project fusion {{ pack.version }}</h1>
+      <h1>Project fusion {{ pkg.version }}</h1>
     {% endblock %}
     </header>
 
