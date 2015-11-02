@@ -1,6 +1,7 @@
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import paths from '../paths';
+import pkg from '../../package.json';
 const $ = gulpLoadPlugins();
 
 /*
@@ -24,7 +25,7 @@ gulp.task('templates', () => {
   const assets = $.useref.assets({ searchPath: `{ ${paths.root}, ${paths.tmp }` });
   $.nunjucksRender.nunjucks.configure([paths.root], { watch: false }); //gulp-nunjucks-render
   return gulp.src(paths.templates)
-    .pipe($.if('*.nunjucks', $.nunjucksRender()))
+    .pipe($.if('*.nunjucks', $.nunjucksRender({css_path: '/styles/', pkg: pkg})))
     .pipe(gulp.dest(paths.tmp))
 
     .pipe(assets)

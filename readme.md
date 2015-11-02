@@ -1,5 +1,4 @@
 [![wercker status](https://app.wercker.com/status/dd129b2edaa49f0b49698d108f209a83/m "wercker status")](https://app.wercker.com/project/bykey/dd129b2edaa49f0b49698d108f209a83)
-
 [ ![Codeship Status for fusionstrings/project-fusion](https://codeship.com/projects/5d2be810-351d-0133-6d1a-16e7f2139dbb/status?branch=master)](https://codeship.com/projects/100679)
 
 #Project Fusion
@@ -68,7 +67,7 @@ $ gulp serve
 *   BrowserSync [http://localhost:3001/](http://localhost:3001/).
 *   BrowserSync UI [http://localhost:3002/](http://localhost:3002/).
 *   Styleguide development server [http://localhost:3000/](http://localhost:3000/).
-*   ESDoc Javascript documentation development server [http://localhost:3000/docs/esdoc](http://localhost:3000/docs/esdoc).
+*   ESDoc Javascript documentation development server [http://localhost:3001/docs/esdoc](http://localhost:3001/docs/esdoc).
 
 #### Serve files from distribution folder
 
