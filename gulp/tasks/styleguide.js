@@ -16,6 +16,7 @@ gulp.task('styleguide:generate', function() {
     .pipe(styleguide.generate({
         title: 'My First Development Styleguide',
         server: true,
+        port: 7000,
         rootPath: paths.tmpStyleguide,
         overviewPath: paths.styleguideOverview
       }))
