@@ -21,7 +21,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       //'app/*-spec.js'
-      'node_modules/karma-babel-preprocessor/node_modules/babel-core/browser-polyfill.js'
+      'node_modules/babel-core/browser-polyfill.js'
     ],
 
     jspm: {
